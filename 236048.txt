@@ -1,0 +1,1410 @@
+Чекор 1: Се префрлате во локалната гранка master.
+
+
+
+git checkout master
+Оваа команда ве враќа во вашата главна развојна гранка, наречена master. Пораката покажува дека вашата локална гранка е зад оддалечената (origin/master) за 6 комити и може да се ажурира со git pull.
+
+Чекор 2: Додавате текст во датотеката README.md.
+
+
+
+echo "Стефанија Трајкоска 236048" >> README.md
+Оваа команда додава ред со вашето име и индекс на крајот од датотеката README.md.
+
+Чекор 3: Иницијализирате Git репозиториум (повторно).
+
+
+
+git init
+Оваа команда иницијализира празен Git репозиториум во тековната папка. Бидејќи веќе сте во Git репозиториум, оваа команда го реиницијализира постоечкиот репозиториум.
+
+Чекор 4: Ги додавате промените во README.md во staging area.
+
+
+
+git add README.md
+Оваа команда ги подготвува промените што сте ги направиле во README.md за следниот комит.
+
+Чекор 5: Ги комитирате подготвените промени со порака "first commit".
+
+
+
+git commit -m "first commit"
+Оваа команда ги зачувува подготвените промени во локалниот репозиториум со пораката "first commit". Пораката покажува дека се сменети 3 датотеки и се додадени 8 линии.
+
+Чекор 6: Ја преименувате локалната гранка master.
+
+
+
+git branch -M master
+Оваа команда ја преименува тековната гранка во master. Во поновите верзии на Git, стандардното име на главната гранка е main, но овде експлицитно ја поставувате на master.
+
+Чекор 7: Го додавате оддалечениот репозиториум на GitHub.
+
+
+
+git remote add origin https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+Оваа команда додава оддалечен репозиториум со име origin и URL-то на вашиот GitHub репозиториум.
+
+Чекор 8: Ги пуширате локалните комити на оддалечениот репозиториум.
+
+
+
+git push -u origin master
+Оваа команда ги испраќа вашите локални комити од гранката master на оддалечениот репозиториум origin, гранката master. Опцијата -u поставува следење (tracking) помеѓу вашата локална master гранка и оддалечената origin/master гранка. Пораката покажува дека се испратени нови гранки (master -> master).
+
+Чекор 9: Се обидувате да извршите команда што не е валидна.
+
+
+
+^[[200~git pull origin master~
+bash: $'\E[200~git': command not found
+Оваа линија покажува дека сте се обиделе да извршите команда што не е препознаена од bash. ^[[200~ и ~ се невалидни знаци во командата.
+
+Чекор 10: Го повлекувате најновиот код од оддалечениот репозиториум.
+
+
+
+git pull origin master
+Оваа команда ги презема промените од оддалечената гранка origin/master и ги интегрира во вашата локална master гранка. Пораката покажува дека се преземени 3 објекти и е ажурирана датотеката README.md.
+
+Чекор 11: Преземате информации за оддалечените гранки.
+
+
+
+git fetch origin
+Оваа команда ги презема информациите за сите гранки и комити од оддалечениот репозиториум origin, но не ги интегрира во вашите локални гранки.
+
+Чекор 12: Се префрлате на гранката 1-remove-a-task-by-name.
+
+
+
+git checkout 1-remove-a-task-by-name
+Оваа команда ве префрла на локалната гранка 1-remove-a-task-by-name. Пораката покажува дека вашата локална гранка и оддалечената (origin/1-remove-a-task-by-name) се разминуваат.
+
+Чекор 13: Повторно ги преземате информациите за оддалечените гранки.
+
+
+
+git fetch origin
+Оваа команда повторно ги презема најновите информации од оддалечениот репозиториум.
+
+Чекор 14: Се префрлате на гранката 2-find-all-completed-tasks.
+
+
+
+git checkout 2-find-all-completed-tasks
+Оваа команда ве префрла на локалната гранка 2-find-all-completed-tasks. Пораката покажува дека вашата локална гранка и оддалечената (origin/2-find-all-completed-tasks) исто така се разминуваат.
+
+Чекор 15: Повторно ги преземате информациите за оддалечените гранки.
+
+
+
+git fetch origin
+Уште едно преземање на информации од оддалечениот репозиториум.
+
+Чекор 16: Се префрлате на гранката 3-list-tasks-sorted-by-name.
+
+
+
+git checkout 3-list-tasks-sorted-by-name
+Ве префрла на локалната гранка 3-list-tasks-sorted-by-name. Пораката покажува дека и оваа гранка се разликува од оддалечената.
+
+Чекор 17: Повторно ги преземате информациите за оддалечените гранки.
+
+
+
+git fetch origin
+Уште едно преземање на информации.
+
+Чекор 18: Се враќате на гранката master.
+
+
+
+git checkout master
+Ве враќа на вашата локална master гранка. Пораката покажува дека е ажурирана со origin/master.
+
+Чекор 19: Повторно ги преземате информациите за оддалечените гранки.
+
+
+
+git fetch origin
+Уште едно преземање на информации.
+
+Чекор 20: Ги листате локалните гранки.
+
+
+
+git branch
+Оваа команда ги прикажува сите ваши локални гранки. Гранката на која сте моментално е означена со *.
+
+Чекор 21: Се префрлате на гранката 1-remove-a-task-by-name.
+
+
+
+git checkout 1-remove-a-task-by-name
+Ве враќа на гранката 1-remove-a-task-by-name.
+
+Чекор 22: Се враќате на гранката master.
+
+
+
+git checkout master
+Ве враќа на гранката master.
+
+Чекор 23: Повторно се префрлате на гранката 1-remove-a-task-by-name.
+
+
+
+git checkout 1-remove-a-task-by-name
+Повторно сте на гранката 1-remove-a-task-by-name.
+
+Чекор 24: Ги додавате сите промени во staging area.
+
+
+
+git add .
+Оваа команда ги подготвува сите изменети и нови датотеки во вашата работна копија за следниот комит.
+
+Чекор 25: Се обидувате да комитирате, но нема промени за комитирање.
+
+
+
+git commit -m "Remove a task by name"
+Оваа команда се обидува да ги зачува подготвените промени. Пораката "nothing to commit, working tree clean" покажува дека нема нови промени за комитирање.
+
+Чекор 26: Се обидувате да ја пуширате гранката 1-remove-a-task-by-name на оддалечениот репозиториум.
+
+
+
+git push origin 1-remove-a-task-by-name
+Оваа команда се обидува да ги испрати локалните комити од гранката 1-remove-a-task-by-name на оддалечената гранка со исто име. Пуширањето е одбиено бидејќи оддалечената гранка има понови комити од вашата локална гранка (non-fast-forward).
+
+Чекор 27: Ја повлекувате и ребазирате оддалечената гранка 1-remove-a-task-by-name.
+
+
+
+git pull --rebase origin 1-remove-a-task-by-name
+Оваа команда ги презема промените од оддалечената гранка origin/1-remove-a-task-by-name и ги ребазира вашите локални комити врз нив. Ова ги преместува вашите локални комити така што изгледаат како да се применети врз најновата верзија на оддалечената гранка.
+
+Чекор 28: Повторно ја пуширате гранката 1-remove-a-task-by-name.
+
+
+
+git push origin 1-remove-a-task-by-name
+Сега кога вашата локална гранка е ажурирана и ребазирана, пуширањето е успешно. Пораката "Everything up-to-date" покажува дека нема нови комити за испраќање.
+
+Чекор 29: Повторно ги додавате сите промени.
+
+
+
+git add .
+Ова може да е непотребно бидејќи претходно веќе сте ги додале промените. Сепак, повторно ги подготвува сите промени.
+
+Чекор 30: Комитирате со порака "Remove a task by name".
+
+
+
+git commit -m "Remove a task by name"
+Ова ги зачувува сите подготвени промени во нов локален комит со пораката "Remove a task by name". Пораката покажува дека се сменети 2 датотеки и се додадени 64 линии.
+
+Чекор 31: Ја пуширате гранката 1-remove-a-task-by-name.
+
+
+
+git push origin 1-remove-a-task-by-name
+Ги испраќате новиот локален комит на оддалечената гранка 1-remove-a-task-by-name.
+
+Чекор 32: Ги листате локалните гранки.
+
+
+
+git branch
+Повторно ги прикажува вашите локални гранки.
+
+Чекор 33: Се префрлате на гранката master.
+
+
+
+git checkout master
+Ве враќа на гранката master.
+
+Чекор 34: Се обидувате да се префрлите на непостоечка гранка.
+
+
+
+git checkout 2-list-tasks-sorted-by-name
+error: pathspec '2-list-tasks-sorted-by-name' did not match any file(s) known to git
+Оваа команда не успева бидејќи не постои локална гранка со име 2-list-tasks-sorted-by-name.
+
+Чекор 35: Се префрлате на гранката 2-find-all-completed-tasks.
+
+
+
+git checkout 2-find-all-completed-tasks
+Ве префрла на гранката 2-find-all-completed-tasks.
+
+Чекор 36: Ги додавате сите промени.
+
+
+
+git add .
+Ги подготвува сите промени.
+
+Чекор 37: Се обидувате да комитирате, но нема промени за комитирање.
+
+
+
+git commit -m "Find all completed tasks"
+Пораката "nothing to commit, working tree clean" покажува дека нема нови промени за комитирање.
+
+Чекор 38: Се обидувате да ја пуширате гранката 2-find-all-completed-tasks.
+
+
+
+git push origin 2-find-all-completed-tasks
+Пуширањето е одбиено поради non-fast-forward.
+
+Чекор 39: Ја повлекувате и ребазирате оддалечената гранка 2-find-all-completed-tasks.
+
+
+
+git pull --rebase origin 2-find-all-completed-tasks
+Ги презема и ребазира промените од оддалечената гранка.
+
+Чекор 40: Повторно ја пуширате гранката 2-find-all-completed-tasks.
+
+
+
+git push origin 2-find-all-completed-tasks
+Пуширањето е успешно.
+
+Чекор 41: Повторно ги додавате сите промени.
+
+
+
+git add .
+Ги подготвува промените.
+
+Чекор 42: Се обидувате да комитирате, но нема промени.
+
+
+
+git commit -m "Find all completed tasks"
+Нема промени за комитирање.
+
+Чекор 43: Повторно се обидувате да пуширате.
+
+
+
+git push origin 2-find-all-completed-tasks
+Нема нови промени за пуширање.
+
+Чекор 44: Повторно ги додавате сите промени.
+
+
+
+git add .
+Ги подготвува промените.
+
+Чекор 45: Комитирате со порака "Find all completed tasks".
+
+
+
+git commit -m "Find all completed tasks"
+Зачувувате нови промени во локален комит.
+
+Чекор 46: Ја пуширате гранката 2-find-all-completed-tasks.
+
+
+
+git push origin 2-find-all-completed-tasks
+Ги испраќате новиот комит на оддалечената гранка.
+
+Чекор 47: Се префрлате на гранката 3-list-tasks-sorted-by-name.
+
+
+
+git checkout 3-list-tasks-sorted-by-name
+Ве префрла на оваа гранка.
+
+Чекор 48: Ги додавате сите промени.
+
+
+
+git add .
+Ги подготвува промените.
+
+Чекор 49: Комитирате со порака "List tasks sorted by name".
+
+
+
+git commit -m "List tasks sorted by name"
+Зачувувате промени во локален комит.
+
+Чекор 50: Се обидувате да пуширате без да наведете оддалечен репозиториум.
+
+
+
+git push 3-list-tasks-sorted-by-name
+fatal: '3-list-tasks-sorted-by-name' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Ова не успева бидејќи не сте го навеле оддалечениот репозиториум (origin).
+
+Чекор 51: Правилно ја пуширате гранката.
+
+
+
+git push origin 3-list-tasks-sorted-by-name
+Пуширањето е одбиено поради non-fast-forward.
+
+Чекор 52: Ја повлекувате и ребазирате гранката.
+
+
+
+git pull --rebase origin 3-list-tasks-sorted-by-name
+Ги презема и ребазира промените од оддалечената гранка.
+
+Чекор 53: Повторно ги додавате сите промени.
+
+
+
+git add .
+Ги подготвува промените.
+
+Чекор 54: Комитирате со иста порака.
+
+
+
+git commit -m "List tasks sorted by name"
+Зачувувате нови промени во локален комит.
+
+Чекор 55: Правилно ја пуширате гранката.
+
+
+
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~
+
+$ cd SI_2025_lab1_236048
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (18-list-tasks-sorted-by-name)
+
+$ git checkout master
+
+Switched to branch 'master'
+
+Your branch is behind 'origin/master' by 6 commits, and can be fast-forwarded.
+
+  (use "git pull" to update your local branch)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ echo "Стефанија Трајкоска 236048" >> README.md
+
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git branch -M master
+
+git remote add origin https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+git push -u origin master
+
+Reinitialized existing Git repository in C:/Users/User/SI_2025_lab1_236048/.git/
+
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+[master 7e31642] first commit
+
+ 3 files changed, 8 insertions(+)
+
+ create mode 100644 .idea/.name
+
+ create mode 100644 .idea/vcs.xml
+
+error: remote origin already exists.
+
+Enumerating objects: 12, done.
+
+Counting objects: 100% (12/12), done.
+
+Delta compression using up to 8 threads
+
+Compressing objects: 100% (10/10), done.
+
+Writing objects: 100% (12/12), 1.99 KiB | 1020.00 KiB/s, done.
+
+Total 12 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+
+remote: Resolving deltas: 100% (2/2), done.
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+ * [new branch]      master -> master
+
+branch 'master' set up to track 'origin/master'.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ ^[[200~git pull origin master~
+
+bash: $'\E[200~git': command not found
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git pull origin master
+
+remote: Enumerating objects: 5, done.
+
+remote: Counting objects: 100% (5/5), done.
+
+remote: Compressing objects: 100% (2/2), done.
+
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+
+Unpacking objects: 100% (3/3), 1008 bytes | 37.00 KiB/s, done.
+
+From https://github.com/strajkoskaa/SI_2025_lab1_236048
+
+ * branch            master     -> FETCH_HEAD
+
+   7e31642..8569f33  master     -> origin/master
+
+Updating 7e31642..8569f33
+
+Fast-forward
+
+ README.md | 4 +---
+
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git fetch origin
+
+git checkout 1-remove-a-task-by-name
+
+From https://github.com/strajkoskaa/SI_2025_lab1_236048
+
+ + 1cf69e1...8569f33 1-remove-a-task-by-name -> origin/1-remove-a-task-by-name  (forced update)
+
+D       .idea/vcs.xml
+
+Switched to branch '1-remove-a-task-by-name'
+
+Your branch and 'origin/1-remove-a-task-by-name' have diverged,
+
+and have 3 and 2 different commits each, respectively.
+
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git fetch origin
+
+git checkout 2-find-all-completed-tasks
+
+From https://github.com/strajkoskaa/SI_2025_lab1_236048
+
+ + 3106edd...8569f33 2-find-all-completed-tasks -> origin/2-find-all-completed-tasks  (forced update)
+
+Switched to branch '2-find-all-completed-tasks'
+
+Your branch and 'origin/2-find-all-completed-tasks' have diverged,
+
+and have 2 and 2 different commits each, respectively.
+
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git fetch origin
+
+git checkout 3-list-tasks-sorted-by-name
+
+From https://github.com/strajkoskaa/SI_2025_lab1_236048
+
+ + 35145b6...8569f33 3-list-tasks-sorted-by-name -> origin/3-list-tasks-sorted-by-name  (forced update)
+
+Switched to branch '3-list-tasks-sorted-by-name'
+
+Your branch and 'origin/3-list-tasks-sorted-by-name' have diverged,
+
+and have 1 and 2 different commits each, respectively.
+
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git fetch origin
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git checkout master
+
+Switched to branch 'master'
+
+Your branch is up to date with 'origin/master'.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git fetch origin
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git branch
+
+  1-remove-a-task-by-name
+
+  16-remove-a-task-by-name
+
+  17-find-all-completed-tasks
+
+  18-list-tasks-sorted-by-name
+
+  2-find-all-completed-tasks
+
+  3-list-tasks-sorted-by-name
+
+* master
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git checkout 1-remove-a-task-by-name
+
+Switched to branch '1-remove-a-task-by-name'
+
+Your branch and 'origin/1-remove-a-task-by-name' have diverged,
+
+and have 3 and 2 different commits each, respectively.
+
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git checkout master
+
+Switched to branch 'master'
+
+Your branch is up to date with 'origin/master'.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git checkout 1-remove-a-task-by-name
+
+Switched to branch '1-remove-a-task-by-name'
+
+Your branch and 'origin/1-remove-a-task-by-name' have diverged,
+
+and have 3 and 2 different commits each, respectively.
+
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git add .
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git commit -m "Remove a task by name"
+
+On branch 1-remove-a-task-by-name
+
+Your branch and 'origin/1-remove-a-task-by-name' have diverged,
+
+and have 3 and 2 different commits each, respectively.
+
+
+
+nothing to commit, working tree clean
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git push origin 1-remove-a-task-by-name
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+ ! [rejected]        1-remove-a-task-by-name -> 1-remove-a-task-by-name (non-fast-forward)
+
+error: failed to push some refs to 'https://github.com/strajkoskaa/SI_2025_lab1_236048.git'
+
+hint: Updates were rejected because the tip of your current branch is behind
+
+hint: its remote counterpart. If you want to integrate the remote changes,
+
+hint: use 'git pull' before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git pull --rebase origin 1-remove-a-task-by-name
+
+From https://github.com/strajkoskaa/SI_2025_lab1_236048
+
+ * branch            1-remove-a-task-by-name -> FETCH_HEAD
+
+Successfully rebased and updated refs/heads/1-remove-a-task-by-name.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git push origin 1-remove-a-task-by-name
+
+Everything up-to-date
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git add .
+
+warning: in the working copy of '.idea/workspace.xml', LF will be replaced by CRLF the next time Git touches it
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git commit -m "Remove a task by name"
+
+[1-remove-a-task-by-name 110d6f8] Remove a task by name
+
+ 2 files changed, 64 insertions(+), 1 deletion(-)
+
+ create mode 100644 .idea/workspace.xml
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git push origin 1-remove-a-task-by-name
+
+Enumerating objects: 8, done.
+
+Counting objects: 100% (8/8), done.
+
+Delta compression using up to 8 threads
+
+Compressing objects: 100% (5/5), done.
+
+Writing objects: 100% (5/5), 1.68 KiB | 1.68 MiB/s, done.
+
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+   8569f33..110d6f8  1-remove-a-task-by-name -> 1-remove-a-task-by-name
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git branch
+
+* 1-remove-a-task-by-name
+
+  16-remove-a-task-by-name
+
+  17-find-all-completed-tasks
+
+  18-list-tasks-sorted-by-name
+
+  2-find-all-completed-tasks
+
+  3-list-tasks-sorted-by-name
+
+  master
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (1-remove-a-task-by-name)
+
+$ git checkout master
+
+Switched to branch 'master'
+
+Your branch is up to date with 'origin/master'.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git checkout 2-list-tasks-sorted-by-name
+
+error: pathspec '2-list-tasks-sorted-by-name' did not match any file(s) known to git
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git checkout 2-find-all-completed-tasks
+
+Switched to branch '2-find-all-completed-tasks'
+
+Your branch and 'origin/2-find-all-completed-tasks' have diverged,
+
+and have 2 and 2 different commits each, respectively.
+
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git add .
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git commit -m "Find all completed tasks"
+
+On branch 2-find-all-completed-tasks
+
+Your branch and 'origin/2-find-all-completed-tasks' have diverged,
+
+and have 2 and 2 different commits each, respectively.
+
+
+
+nothing to commit, working tree clean
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git push origin 2-find-all-completed-tasks
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+ ! [rejected]        2-find-all-completed-tasks -> 2-find-all-completed-tasks (non-fast-forward)
+
+error: failed to push some refs to 'https://github.com/strajkoskaa/SI_2025_lab1_236048.git'
+
+hint: Updates were rejected because the tip of your current branch is behind
+
+hint: its remote counterpart. If you want to integrate the remote changes,
+
+hint: use 'git pull' before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git pull --rebase origin 2-find-all-completed-tasks
+
+From https://github.com/strajkoskaa/SI_2025_lab1_236048
+
+ * branch            2-find-all-completed-tasks -> FETCH_HEAD
+
+Successfully rebased and updated refs/heads/2-find-all-completed-tasks.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git push origin 2-find-all-completed-tasks
+
+Everything up-to-date
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git add .
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git commit -m "Find all completed tasks"
+
+On branch 2-find-all-completed-tasks
+
+Your branch is up to date with 'origin/2-find-all-completed-tasks'.
+
+
+
+nothing to commit, working tree clean
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git push origin 2-find-all-completed-tasks
+
+Everything up-to-date
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git add .
+
+warning: in the working copy of '.idea/workspace.xml', LF will be replaced by CRLF the next time Git touches it
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git commit -m "Find all completed tasks"
+
+[2-find-all-completed-tasks 63571fd] Find all completed tasks
+
+ 2 files changed, 69 insertions(+), 2 deletions(-)
+
+ create mode 100644 .idea/workspace.xml
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git push origin 2-find-all-completed-tasks
+
+Enumerating objects: 8, done.
+
+Counting objects: 100% (8/8), done.
+
+Delta compression using up to 8 threads
+
+Compressing objects: 100% (5/5), done.
+
+Writing objects: 100% (5/5), 1.66 KiB | 1.66 MiB/s, done.
+
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+   8569f33..63571fd  2-find-all-completed-tasks -> 2-find-all-completed-tasks
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (2-find-all-completed-tasks)
+
+$ git checkout 3-list-tasks-sorted-by-name
+
+Switched to branch '3-list-tasks-sorted-by-name'
+
+Your branch and 'origin/3-list-tasks-sorted-by-name' have diverged,
+
+and have 1 and 2 different commits each, respectively.
+
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git add .
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git commit -m "List tasks sorted by name"
+
+[3-list-tasks-sorted-by-name 4dc291c] List tasks sorted by name
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git push 3-list-tasks-sorted-by-name
+
+fatal: '3-list-tasks-sorted-by-name' does not appear to be a git repository
+
+fatal: Could not read from remote repository.
+
+
+
+Please make sure you have the correct access rights
+
+and the repository exists.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git push origin 3-list-tasks-sorted-by-name
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+ ! [rejected]        3-list-tasks-sorted-by-name -> 3-list-tasks-sorted-by-name (non-fast-forward)
+
+error: failed to push some refs to 'https://github.com/strajkoskaa/SI_2025_lab1_236048.git'
+
+hint: Updates were rejected because the tip of your current branch is behind
+
+hint: its remote counterpart. If you want to integrate the remote changes,
+
+hint: use 'git pull' before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git pull --rebase origin 3-list-tasks-sorted-by-name
+
+From https://github.com/strajkoskaa/SI_2025_lab1_236048
+
+ * branch            3-list-tasks-sorted-by-name -> FETCH_HEAD
+
+Successfully rebased and updated refs/heads/3-list-tasks-sorted-by-name.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git add .
+
+warning: in the working copy of '.idea/workspace.xml', LF will be replaced by CRLF the next time Git touches it
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git commit -m "List tasks sorted by name"
+
+[3-list-tasks-sorted-by-name 21ad646] List tasks sorted by name
+
+ 1 file changed, 61 insertions(+)
+
+ create mode 100644 .idea/workspace.xml
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git push origin 3-list-tasks-sorted-by-name
+
+Enumerating objects: 10, done.
+
+Counting objects: 100% (10/10), done.
+
+Delta compression using up to 8 threads
+
+Compressing objects: 100% (7/7), done.
+
+Writing objects: 100% (7/7), 1.87 KiB | 959.00 KiB/s, done.
+
+Total 7 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+   8569f33..21ad646  3-list-tasks-sorted-by-name -> 3-list-tasks-sorted-by-name
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (3-list-tasks-sorted-by-name)
+
+$ git checkout master
+
+Switched to branch 'master'
+
+Your branch is up to date with 'origin/master'.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git merge 3-list-tasks-sorted-by-name
+
+Updating 8569f33..21ad646
+
+Fast-forward
+
+ .idea/workspace.xml | 61 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ SI2025Lab1Main.java |  2 +-
+
+ 2 files changed, 62 insertions(+), 1 deletion(-)
+
+ create mode 100644 .idea/workspace.xml
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git push origin master
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+ ! [rejected]        master -> master (fetch first)
+
+error: failed to push some refs to 'https://github.com/strajkoskaa/SI_2025_lab1_236048.git'
+
+hint: Updates were rejected because the remote contains work that you do not
+
+hint: have locally. This is usually caused by another repository pushing to
+
+hint: the same ref. If you want to integrate the remote changes, use
+
+hint: 'git pull' before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git pull -resolve origin master
+
+error: invalid value for '--rebase': 'esolve'
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ ^C
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git pull -rebase origin master
+
+error: invalid value for '--rebase': 'ebase'
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git push origin master
+
+To https://github.com/strajkoskaa/SI_2025_lab1_236048.git
+
+ ! [rejected]        master -> master (fetch first)
+
+error: failed to push some refs to 'https://github.com/strajkoskaa/SI_2025_lab1_236048.git'
+
+hint: Updates were rejected because the remote contains work that you do not
+
+hint: have locally. This is usually caused by another repository pushing to
+
+hint: the same ref. If you want to integrate the remote changes, use
+
+hint: 'git pull' before pushing again.
+
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ ^C
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ ^[[200~git branch --no-merged master
+
+bash: $'\E[200~git': command not found
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git branch --no-merged master
+
+  1-remove-a-task-by-name
+
+  16-remove-a-task-by-name
+
+  17-find-all-completed-tasks
+
+  18-list-tasks-sorted-by-name
+
+  2-find-all-completed-tasks
+
+
+
+User@DESKTOP-B266IPU MINGW64 ~/SI_2025_lab1_236048 (master)
+
+$ git checkout master
+
+Already on 'master'
+
+* 21ad646 (HEAD -> master, origin/3-list-tasks-sorted-by-name, 3-list-tasks-sorted-by-name) List tasks sorted by name
+
+* 393447f List tasks sorted by name
+
+| * 63571fd (origin/2-find-all-completed-tasks, 2-find-all-completed-tasks) Find all completed tasks
+
+|/
+
+| * 110d6f8 (origin/1-remove-a-task-by-name, 1-remove-a-task-by-name) Remove a task by name
+
+|/
+
+* 8569f33 (origin/master, origin/HEAD) Update README.md
+
+* 7e31642 first commit
+
+| *   62a63c1 (origin/18-list-tasks-sorted-by-name, origin/17-find-all-completed-tasks, origin/16-remove-a-task-by-name, 18-list-tasks-sorted-by-name, 17-find-all-completed-tasks, 16-remove-a-task-by-name) Merge pull request #11 from strajkoskaa/2-find-all-completed-tasks
+
+| |\
+
+| | *   5f4c401 Merge branch 'master' into 2-find-all-completed-tasks
+
+| | |\
+
+| | |/
+
+| |/|
+
+| * |   c6e48b4 Merge pull request #10 from strajkoskaa/1-remove-a-task-by-name
+
+| |\ \
+
+| | * | 56b2f06 Remove a task by name
+
+:...skipping...
+
+* 21ad646 (HEAD -> master, origin/3-list-tasks-sorted-by-name, 3-list-tasks-sorted-by-name) List tasks sorted by name
+
+* 393447f List tasks sorted by name
+
+| * 63571fd (origin/2-find-all-completed-tasks, 2-find-all-completed-tasks) Find all completed tasks
+
+|/
+
+| * 110d6f8 (origin/1-remove-a-task-by-name, 1-remove-a-task-by-name) Remove a task by name
+
+|/
+
+* 8569f33 (origin/master, origin/HEAD) Update README.md
+
+* 7e31642 first commit
+
+| *   62a63c1 (origin/18-list-tasks-sorted-by-name, origin/17-find-all-completed-tasks, origin/16-remove-a-task-by-name, 18-list-tasks-sorted-by-name, 17-find-all-completed-tasks, 16-remove-a-task-by-name) Merge pull request #11 from strajkoskaa/2-find-all-completed-tasks
+
+| |\
+
+| | *   5f4c401 Merge branch 'master' into 2-find-all-completed-tasks
+
+| | |\
+
+| | |/
+
+| |/|
+
+| * |   c6e48b4 Merge pull request #10 from strajkoskaa/1-remove-a-task-by-name
+
+| |\ \
+
+| | * | 56b2f06 Remove a task by name
+
+| |/ /
+
+| | * 3106edd Find all completed tasks
+
+| |/
+
+| * 35145b6 Update README.md
+
+|/
+
+* 0625457 Add starter code
+
+* a641c19 Initial commit
+
+
+
+
+
+napisi cekor po cekor kako e izraboteno celo ova, bez greskite (kako dokumentacija na srabotenoto)
+
+
+Се разбира, еве чекор по чекор како е изработено ова, без грешките, како документација на сработеното:
+
+Чекор 1: Се префрлате во локалната гранка master.
+
+
+
+git checkout master
+Чекор 2: Го повлекувате најновиот код од оддалечениот репозиториум за да ја ажурирате локалната гранка master.
+
+
+
+git pull origin master
+Чекор 3: Преземате информации за оддалечените гранки.
+
+
+
+git fetch origin
+Чекор 4: Се префрлате на гранката 1-remove-a-task-by-name.
+
+
+
+git checkout 1-remove-a-task-by-name
+Чекор 5: Ги додавате сите промени во staging area.
+
+
+
+git add .
+Чекор 6: Комитирате со порака "Remove a task by name".
+
+
+
+git commit -m "Remove a task by name"
+Чекор 7: Ја повлекувате и ребазирате оддалечената гранка 1-remove-a-task-by-name за да ги интегрирате евентуалните промени од оддалечениот репозиториум и да го поедноставите историјатот.
+
+
+
+git pull --rebase origin 1-remove-a-task-by-name
+Чекор 8: Ја пуширате локалната гранка 1-remove-a-task-by-name на оддалечениот репозиториум.
+
+
+
+git push origin 1-remove-a-task-by-name
+Чекор 9: Се префрлате на гранката master.
+
+
+
+git checkout master
+Чекор 10: Се префрлате на гранката 2-find-all-completed-tasks.
+
+
+
+git checkout 2-find-all-completed-tasks
+Чекор 11: Ги додавате сите промени во staging area.
+
+
+
+git add .
+Чекор 12: Комитирате со порака "Find all completed tasks".
+
+
+
+git commit -m "Find all completed tasks"
+Чекор 13: Ја повлекувате и ребазирате оддалечената гранка 2-find-all-completed-tasks.
+
+
+
+git pull --rebase origin 2-find-all-completed-tasks
+Чекор 14: Ја пуширате локалната гранка 2-find-all-completed-tasks на оддалечениот репозиториум.
+
+
+
+git push origin 2-find-all-completed-tasks
+Чекор 15: Се префрлате на гранката 3-list-tasks-sorted-by-name.
+
+
+
+git checkout 3-list-tasks-sorted-by-name
+Чекор 16: Ги додавате сите промени во staging area.
+
+
+
+git add .
+Чекор 17: Комитирате со порака "List tasks sorted by name".
+
+
+
+git commit -m "List tasks sorted by name"
+Чекор 18: Ја повлекувате и ребазирате оддалечената гранка 3-list-tasks-sorted-by-name.
+
+
+
+git pull --rebase origin 3-list-tasks-sorted-by-name
+Чекор 19: Ја пуширате локалната гранка 3-list-tasks-sorted-by-name на оддалечениот репозиториум.
+
+
+
+git push origin 3-list-tasks-sorted-by-name
+Чекор 20: Се префрлате на гранката master.
+
+
+
+git checkout master
+Чекор 21: Ги интегрирате промените од гранката 3-list-tasks-sorted-by-name во локалната гранка master.
+
+
+
+git merge 3-list-tasks-sorted-by-name
+Чекор 22: Го повлекувате најновиот код од оддалечениот репозиториум master пред да пуширате, за да избегнете конфликти.
+
+
+
+git pull origin master
+Чекор 23: Ја пуширате локалната гранка master на оддалечениот репозиториум.
+
+
+
+git push origin master
+Чекор 24: Ги листате локалните гранки за да видите на кои гранки работите.
+
+
+
+git branch
+Чекор 25: Ги листате локалните гранки кои не се споени со master.
+
+
+
+git branch --no-merged master
+Чекор 26: Ја прегледувате историјата на комити на гранката master со помош на git log за да видите како се интегрирани промените.
+
+
+
+git log --graph --oneline --decorate
+Ова е документација на чекорите што логично водат кон успешно извршување на задачите и нивно интегрирање во главната гранка. Ги изоставив командите што доведоа до грешки и повторувањата кои не беа неопходни.
