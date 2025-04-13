@@ -26,7 +26,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "1-remove-a-task-by-name",
+
+    "git-widget-placeholder": "2-find-all-completed-tasks",
+
+
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/SI_2025_lab1_236048",
     "node.js.detected.package.eslint": "true",
