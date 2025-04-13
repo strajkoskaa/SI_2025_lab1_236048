@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bb66b8b-0ecb-4211-8111-81d5ad112035" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SI2025Lab1Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/SI2025Lab1Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="5bb66b8b-0ecb-4211-8111-81d5ad112035" name="Changes" comment="" />
+
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,10 +25,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-
-    "git-widget-placeholder": "2-find-all-completed-tasks",
-
-
+    "git-widget-placeholder": "3-list-tasks-sorted-by-name",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/SI_2025_lab1_236048",
     "node.js.detected.package.eslint": "true",
